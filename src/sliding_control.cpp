@@ -12,7 +12,8 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
 
-#define LOITER 1900
+#define LOITER 1420
+//#define LOITER 1900
 
 using namespace std_msgs;
 using namespace cv;
