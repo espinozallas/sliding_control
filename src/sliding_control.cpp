@@ -368,7 +368,7 @@ int main(int argc, char **argv)
   sub_state_machine = n.subscribe("state_machine", 1000, CallbackStateMachine);
   clock_t begin_time = clock();
   
-  cv::Mat image = cv::imread("/home/erobots/workspace/src/sliding_control/src/white.jpg");
+  cv::Mat image = cv::imread("src/sliding_control/src/white.jpg");
 
   if (!image.empty())
     {
@@ -404,12 +404,12 @@ int main(int argc, char **argv)
     
       if(CONTROL_ON){
         sendControl();
-        image = cv::imread("/home/erobots/workspace/src/sliding_control/src/white.jpg", CV_LOAD_IMAGE_COLOR);
+        image = cv::imread("src/sliding_control/src/white.jpg", CV_LOAD_IMAGE_COLOR);
         cv::putText(image, "CONTROL ON", cv::Point(30,30), 1, 1, cv::Scalar(0,0,0), 2);
       }
       else{
         emergencyStop();
-        image = cv::imread("/home/erobots/workspace/src/sliding_control/src/white.jpg", CV_LOAD_IMAGE_COLOR);
+        image = cv::imread("src/sliding_control/src/white.jpg", CV_LOAD_IMAGE_COLOR);
         cv::putText(image, "CONTROL OFF", cv::Point(30,30), 1, 1, cv::Scalar(0,0,0), 2);
       }
 
@@ -428,4 +428,3 @@ int main(int argc, char **argv)
 
   return 0;
 }
-
